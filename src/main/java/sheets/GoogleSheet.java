@@ -101,6 +101,11 @@ public class GoogleSheet {
 		return length;
 	}
 	
+	/**
+	 * Returns the length of a column
+	 * @param col: Alphabetical notation of column
+	 * @return
+	 */
 	public int getColumnLength(String col) {
 		int length = 0;
 		String cellValue = get(col, length);
@@ -121,6 +126,12 @@ public class GoogleSheet {
 		return length;
 	}
 	
+	/**
+	 * Changes the specified cell to the new object, (0,0) references the top left cell
+	 * @param xCoord
+	 * @param yCoord
+	 * @param replacementObject
+	 */
 	public void change(int xCoord, int yCoord, Object replacementObject) {
 		yCoord++;
 		String xAlphabetConversion = "";
@@ -141,6 +152,12 @@ public class GoogleSheet {
 		}
 	}
 	
+	/**
+	 * Changes the specified cell to the new object
+	 * @param xCoord
+	 * @param yCoord
+	 * @param replacementObject
+	 */
 	public void change(String col, int yCoord, Object replacementObject) {
 		yCoord++;
 		ValueRange updatedValue = new ValueRange();
